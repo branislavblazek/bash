@@ -3,7 +3,7 @@
 # GENERAL FUNCTIONS
 
 # Python3 calculator (alt to EXPR)
-function calc () {  python3 -c "print($*)"; }
+function calc () {  python3 -c "print($*)" }
 
 # WORK FUNCTIONS
 
@@ -20,50 +20,50 @@ function seeds () {
 
 # Automate git add & commit & push
 function rocket (){
-	current_branch=$(git rev-parse --abbrev-ref HEAD);
-	human_branch_title=${current_branch//-/ };
-	git add *;
+	current_branch=$(git rev-parse --abbrev-ref HEAD)
+	human_branch_title=${current_branch//-/ }
+	git add *
 	if [ -z "$1" ]
 	then
-		git commit -m $human_branch_title;
+		git commit -m $human_branch_title
 	else
-		git commit -m $1;
+		git commit -m $1
 	fi
-	git push --set-upstream origin `$current_branch`;
+	git push --set-upstream origin `$current_branch`
 }
 
 # GIT FUNCTIONS
 
 # Create new Branch from DEV Branch
 function cb () {
-        git checkout dev;
-        git pull;
-        git checkout -b $1;
+        git checkout dev
+        git pull
+        git checkout -b $1
 }
 
 # Change Branch and Start
 function cbs () {
-        cb $1;
-        npm start;
+        cb $1
+        npm start
 }
 
 # Move into another Branch
-function co () { git checkout $1; }
+function co () { git checkout $1 }
 
 # Delete lastly created local Branch
-function dellastlocal () {git branch -d "@{-1}"; }
+function dellastlocal () { git branch -d "@{-1}" }
 
 # Full Rebase proccess on DEV Branch
 function reb (){
-        git checkout dev;
-        git pull;
-        git checkout -;
+        git checkout dev
+        git pull
+        git checkout -
         git rebase dev
 }
 
 # Fix CRLF Problem (usually Windows to MacOS)
 function crlf (){
-        git config core.autocrlf false;
-        git rm --cached -r .;
+        git config core.autocrlf false
+        git rm --cached -r .
         git reset --hard
 }
