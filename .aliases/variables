@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Easier navigation: .., ..., ...., .....
+alias ..="cd .."
+alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# NPM shortcuts
+alias st='npm start'
+alias mgls='npm run migrate-latest'
+alias seeds=getSeeds
+
+# DIRs for work projects & start them
+alias st-login='cd ~/Documents/Code/---WORK-DIR---/login && npm start'
+alias st-file='cd ~/Documents/Code/---WORK-DIR---/fileservice && npm start'
+alias st-be='cd ~/Documents/Code/---WORK-DIR---/backend && npm start'
+alias st-gb='cd ~/Documents/Code/---WORK-DIR---/gotenberg && docker-compose up -d'
+alias st-fe='cd ~/Documents/Code/---WORK-DIR---/frontend && npm start'
+alias localpwd='echo "6EG9vrOP7fIKsM1" | pbcopy'
+alias devpwd='echo "6bAnfHTcKzEcGd0" | pbcopy'
+
+# GIT Rebase
+alias reb=Rebase
+alias rebcon='git rebase --continue'
+alias rebabt='git rebase --abort'
