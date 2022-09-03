@@ -12,4 +12,3 @@ ls [-FGRSTahlort] [--color=when] [file ...]
 -o # omit group id
 -r # reverse the order of the sort
 -t # sort by descending time modified (most recently modified first)
-
