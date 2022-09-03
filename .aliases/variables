@@ -18,8 +18,8 @@ alias st-file='cd ~/Documents/Code/---WORK-DIR---/fileservice && npm start'
 alias st-be='cd ~/Documents/Code/---WORK-DIR---/backend && npm start'
 alias st-gb='cd ~/Documents/Code/---WORK-DIR---/gotenberg && docker-compose up -d'
 alias st-fe='cd ~/Documents/Code/---WORK-DIR---/frontend && npm start'
-alias localpwd='echo "6EG9vrOP7fIKsM1" | pbcopy'
-alias devpwd='echo "6bAnfHTcKzEcGd0" | pbcopy'
+alias localpwd='echo "---LOCAL-PWD---" | pbcopy'
+alias devpwd='echo "---DEV-PWD---" | pbcopy'
 
 # GIT Rebase
 alias reb=Rebase
