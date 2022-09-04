@@ -1,0 +1,7 @@
+mkdir - MaKe DIRecotry
+
+mkdir a # creates a DIR in pwd
+mkdir a; cd !$ # creates a DIR in pwd & cd inside
+mkdir a b c d # creates a, b, c, d DIRS in pwd
+mkdir -p a/b/c/d # creates DIRS tree without error 
+mkdir folder_no_{4..100} # creates DIRS with names from 4 to 100

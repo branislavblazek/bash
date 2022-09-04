@@ -1,0 +1,9 @@
+cd - Change Directory
+
+cd . # current pwd
+cd .. # one level up
+cd ../.. # two levels up
+cd ~ # moves to home
+cd - # go to previous pwd
+cd * # cd into first result
+cd *l # cd into first result which filename starts with `l`

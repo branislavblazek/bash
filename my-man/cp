@@ -1,0 +1,7 @@
+cp - Copy
+cp ahoj.txt svet.txt # copy ahoj.txt and renames it to svet.txt
+cp *.txt notes # copy all txt files into notes dir
+cp todo.txt list.txt shop # copy these two files into shop dir
+cp -r folder_1 folder_2 # copy DIRs
+cp -s source.txt shortcut.txt # creates symbolic link 
+# when creating outside pwd use full path with source 

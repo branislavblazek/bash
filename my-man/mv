@@ -1,0 +1,4 @@
+mv - Moves
+mv folder1/ folder2/ # moves folder1 inside folder2
+mv folder1/* folder2/ # moves everything from folder1 into folder2
+mv -b Documents/todo.txt todo.txt # moves todo.txt but there already exists so adds ~ prefix (Backup)
