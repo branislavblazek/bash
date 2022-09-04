@@ -1,0 +1,56 @@
+3 modes - Command / Insert / Visual. I for Insert, V for Visual, ESC for COMMAND
+
+:q # quit - closes editor
+:q! # force quit - discard changes
+:wq # write and quit
+:w # write - saves document
+
+# ~/.vimrc 
+# options
+syntax on
+set cursorline
+set incsearch
+set ignorecase
+set smartcase
+set number
+set ruler
+set hlsearch
+colorscheme torte
+
+:%s/1500/2022/gci # replace 1500 with 2022, global(g), case-insensitive(i), custom select what(c) 
+:ab bb Branislav Blazek # when writing bb and space after it will replace with my name
+. # execute last executed command
+/ # search from current position to end
+? # search from beggining of file to current position
+n # jump to next result
+N # jump to previous result
+:12 Enter OR 12G # jump to line no. 12
+
+w # jump to start of the next word
+b # jump to start of the previous word
+^ or 0 # jump to start of line
+$ # jump to end of line
+G # jump to start of last line in file
+gg # jump to start of first line in file
+H # jump to first line in file
+M # jumo to middle line in file
+L # jumo to last file in file
+d # delete WHAT
+	dw # delete from current position in word to the end of the word OR delete current word
+	db # delete from begging of word to the current position OR delete previous word
+	dd # delete current line
+	d0 # delete everything in line from begging to current position
+	d^ # delete everything in line from current position to end
+	dgg # delete everything from begging of file to current line
+	dG # delete everything from current line to end of file
+u # undo
+p # paste string after current line which was deleted by d
+P # like p but paste before current line
+y # copy selection from Visual mode
+V # select whole line in Visual mode
+guu # whole letters in current line to lowercase
+gUU # whole letters in current line to uppercase
+Ctrl+V # multiline select (with arrows), with d it deletes it
+Cmd+P # Help with writing - if begg of current word exists in file, it will autocomplete it
+
+10w # jump to start of the 10th next word

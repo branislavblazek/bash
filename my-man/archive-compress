@@ -1,0 +1,20 @@
+archive - having 5 files, each of size of 10kb, archiving will result 5x10kB = it put files into one file
+compression - proess of taking input data and with some alg compress it = reduce size effectively
+
+# TAR
+tar xvf source.tar.gz [destination]
+-x # eXtract
+-v # Verbose
+-f # File
+tar cvf archive.tar .
+tar tvf archive.tar
+-t # just show whats inside
+tar cvzf archiv.tar.gz
+-z # Compress into .gz
+-j # Compress into .bz2
+
+# ZIP
+zip -r folders.zip folders
+-r # Recursively (for DIRs)
+unzip folders.zip
+-d # Directory (where to unzip)
