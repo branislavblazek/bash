@@ -1,0 +1,23 @@
+chmod # edit privileges for file
+> ls -l file
+> drwx------
+d = dir, - = file, l = link
+first group = owner
+second group = group
+third group = guest
+r = read, w = write, x = execute
+
+chmod 4 file == chmod 004 file # set read rights for guest, others can't do nothing
+0 - nothing
+1 - execute
+2 - write
+3 - 
+4 - read
+5 - execute & read
+6 - write & read
+7 - execute & write &read
+
+chmod u=rwx,g=r,o= file # human readeble notation
+chmod 740 file
+
+chmod -R 760 folder # set rights for folder and for its content

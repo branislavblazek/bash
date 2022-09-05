@@ -1,0 +1,7 @@
+wc file # returns statistics about no of lines, words and bytes
+51 [lines] 124 [words] 467 [bytes] file [name]
+wc -c # just bytes
+wc -l # just lines
+wc -L # max line length
+wc -w # just words
+wc -m # just characters

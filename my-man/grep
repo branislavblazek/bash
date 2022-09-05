@@ -1,0 +1,11 @@
+grep branislav /etc/passwd	# look for branislav in that file
+grep -r branislav /etc/		# look for branislav in entire etc DIR
+grep -c error *.log		# return no of results in log files
+grep -w dva pokus		# look for word dva (not as part of another word)
+grep -A1 -w dva pokus		# look for word dva and show 1 more lines After result
+grep -B1 -w dva pokus		# look for word dva and show 1 more lines Before result
+grep -v skaredeslovo pokus	# omit skaredeslovo in result (invert-match)
+grep -rL dva *			# return all files where ISN'T dva
+grep -n dva *			# show number of line where is result
+grep -o dva.tri pokus		# only-matching
+grep -m1 dva pokus		# retuns just first result

@@ -1,0 +1,14 @@
+less 	# opens editor
+	# during save I can choose if to save, save as, prepand to file, append to file
+	# Shift+F - Follow mode, when file is open in less and samowhere else its changed, it will reload
+	# With V I can edit that file in nano - after save Ill be in less
+
+tail 	# shows last 10 lines of file
+tail -3 logs # show just three last lines of file
+tail -F logs # follow mode
+
+cat 	# shows entire file
+cat -s	# squeeze - hides multiple empty lines into one
+cat -n 	# number - shows no of lines in output
+cat file > file2 # copy content of file and replace it with file2
+cat file >> file2 # copy content of file and append it into file2
