@@ -1,1 +1,12 @@
 free -h # RAM & SWAP memory - free = unused, avaible = was used by app but it can be used for something else
+top # show actual proccess
+# first line - uptime, no of logged users, load average - when 1 CPU: 0 free, 1 full, 
+uptime # show first line of top
+ps # unactive show proccesses (just list)
+ps a # proccesses of all users
+ps x # proccesses of unknowd source
+ps u # additional info
+kill -9 [pid]
+killall firefox # kills without PID
+pgrep -l firefox # better
+xkill # and then click what to kill

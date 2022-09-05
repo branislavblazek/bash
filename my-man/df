@@ -1,0 +1,12 @@
+df # disk free - how many space is avaible on disk
+-h # human readable
+
+du # disk usage
+-h # human readable
+-s # summary
+-c # total
+--exclude="*.txt" # exclude all txts
+
+du -hs * # returns sizes of items and dirs itself
+du -hs .[!.]* # just hidden files
+du -hs .[!.]* * # all

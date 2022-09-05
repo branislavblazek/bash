@@ -1,0 +1,41 @@
+* # replace unlimited amount of chars
+find *.* # find all files with dot in filename
+
+? # replace one char
+find ?.txt # find files like a.txt b.txt
+find ????.txt # find ahoj.txt
+
+meno=branislav
+echo $meno
+
+$ # ampersand - run commds paralely (will run at same time)
+
+; # do first cmd and after it finished, do second cmd
+
+&& # do first cmd and if it is successful do second cmd
+ping -c2 google.com && ping -c2 facebook.com
+
+|| # do first cmd and if it is failed do second cmd
+ping -c2 google.com && echo OK || echo ERROR
+
+| # use output from first cmd as input for second cmd
+less data.txt | wc -w
+
+! # exclude
+find *.txt ! -name 4.txt
+
+!! # repeat last cmd
+
+eval {mkdir, cd}\ testdir\; && (ping -c2 wordpress.org && wget http://owrdpress.org/latest.tar.gz)
+
+teraz=$(date +%Y)
+
+mkdir folder_{1..3} # folder_1, folder_2, folder_3
+
+ll jan[oa] # jano jana
+ll jan[a-z] # same as jan?
+
+\ # break line
+
+echo '$meno' # $meno
+echo "$meno" # branislav

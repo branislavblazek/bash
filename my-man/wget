@@ -1,0 +1,8 @@
+wget addrss # download
+-c # if previous download was cancelled, this wil continue it
+-O name # output filename
+-i filename # download all links from that file (space as deli)
+--timestamping # if is download file with same timestamp as on server, will not continue
+-r dsl.sk # download whole webpage
+--convert-links # convert links for local use
+-m # mirror
