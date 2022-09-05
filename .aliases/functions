@@ -29,7 +29,7 @@ function rocket (){
 	else
 		git commit -m $1
 	fi
-	git push --set-upstream origin `$current_branch`
+	git push --set-upstream origin $current_branch
 }
 
 # GIT FUNCTIONS
