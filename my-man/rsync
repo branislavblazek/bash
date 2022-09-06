@@ -1,0 +1,7 @@
+rsync fromwhat towhere
+-v # verbose
+-a # archive = copy with all its metadata (time created, owner...), otherwise will be used current time
+--delete # when rsyncing, it will not delete files in destination if in source are deleted, otherwise use --delete
+-m --include="*.php" --include="/*" --exclude="*" # sync just php files
+-m # prune empty dirs
+-z # compress

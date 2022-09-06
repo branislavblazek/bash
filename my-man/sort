@@ -1,0 +1,5 @@
+sort filename # sorts content of file alphabetically
+-r # reverse
+ls -alF > vypis; sort -nk 2 vypis
+-n # numeric
+-k # key

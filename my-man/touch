@@ -1,0 +1,4 @@
+touch {1..4}.txt # creates files
+touch -a  test.txt # changes acces time to current time
+touch -r test.txt test2.txt # test2.txt will have metadata as test.txt
+touch -t 202201011200 test.txt # custom create date

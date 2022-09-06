@@ -1,0 +1,5 @@
+curl www.dsl.sk > index.html # downloads into file
+-o filename # save as file with filename
+-C # when downloading will be interrupted, it will continue on next call from last position
+curl -u username:NBUSR123 -O frp://website.sk/file.php
+curl -u username:NBUSR123 -T filetoupload.txt frp://website.sk/file.php

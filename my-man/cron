@@ -1,0 +1,6 @@
+crontab -l # list current CRON jobs
+crontab -e # to edit
+# https://crontab.guru/#*_*_*_*_*
+whereis ping
+* * * * * /sbin/ping -c 2 dsl.sk >> pings.txt
+@reboot # do after boot 

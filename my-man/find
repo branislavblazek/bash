@@ -1,0 +1,17 @@
+find . -name rem* # find files with name
+find . -name "*.txt" -or -name "*.php" # find txt or php file
+find . -name "*.txt" -and -not -name "*test*" # find all txt files but not those what inclludes test
+-iname # as name but case insensitive
+-maxdepth 1 # depth dir for search
+-mindepth 1 # min depth
+-type f/d # look just for files/dirs
+-ls # with ls
+-perm 777
+-user branslav
+-group wheel
+-mtime +10 # files older than 10 days
+-mtime 10 # filder 10 days old
+-mtime -10 # folder younger than 10 days
+-mmin # as minutes
+-size +5M # files biger than 5MB
+-type -d -empty # empty dirs

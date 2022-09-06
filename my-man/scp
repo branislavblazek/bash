@@ -1,0 +1,5 @@
+scp # secure copy
+scp *.txt files
+scp file1 file2 /tmp/folder # multiple
+scp file1 file_1.txt pi@192.168.0.100:/tmp/files
+scp pi@192.168.0.100/tmp/files/file_1.txt .
