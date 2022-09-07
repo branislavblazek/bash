@@ -1,0 +1,7 @@
+cal # shows calendar
+cal 10 2002
+cal 2002
+cal -m 5 # 5 month of current year
+ncal # rotated view
+ncal -e # show date of easter
+ncal -e 2023

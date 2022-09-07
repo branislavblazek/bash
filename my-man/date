@@ -1,0 +1,17 @@
+date # shut current date time
++%Y # Year 2022
++%y # 22
++%m # Month
++%B # Full name Month
++%b # Short name Month
++%d # Day
++%-d # Day without 0
++%A # Full name Day
++%a # Short name Day
++%H # Hour
++%M # Minutes
++%S # Seconds
++%F # %Y-%m-%d
++%T $# %H:%M:%S
++%j # day of year
++%N # Nanoseconds

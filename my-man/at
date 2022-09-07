@@ -1,0 +1,5 @@
+at # do something at some time (like CRON but for one-time use)
+at [time] <Enter> write cmds; Ctrl+D to save
+at -l # list
+at -c 8 # delete 
+at -c 8 | at now + 1months
