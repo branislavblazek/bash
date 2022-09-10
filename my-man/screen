@@ -1,0 +1,17 @@
+screen # click Space to enter
+Ctrl+A C # creates another screen
+Ctrl+A P/N # swtich between screen
+Ctrl+A 0,1,2 # jump to screen no ...
+Ctrl+A " # show current screens with no
+Ctrl+A S # split screen horizontally as as Cmd+D with Cmd+Shift+D
+Ctrl+A | # split screen vertically
+Ctrl+A Tab # jump between screens
+Ctrl+A Shift+Q # quit split screens
+Ctrl+A Shift+A # renames current screen title
+Ctrl+A X # password current screen
+Ctrl+D # detach screen cmd
+Ctrl+A ? # help
+screen -r # redetach
+screen -ls # screens in bg
+screen -r ID # redetach to ID
+screen -k # kill window

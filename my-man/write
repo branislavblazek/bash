@@ -1,0 +1,5 @@
+write branislav terminalID  # writes message to terminal
+w # list avaible terminalsID
+
+write branislav # write this on both terminals and it will open livechat
+cat file | write branislav # send content of file to chat

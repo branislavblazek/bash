@@ -1,0 +1,4 @@
+last # shows login into machine by time
+last | head # last 10 logins
+last branislav # just me
+last branislav | grep "Mar 5"

@@ -53,4 +53,15 @@ gUU # whole letters in current line to uppercase
 Ctrl+V # multiline select (with arrows), with d it deletes it
 Cmd+P # Help with writing - if begg of current word exists in file, it will autocomplete it
 
+hash files:
+vi +X passwords <Enter>
+enter passwd
+enter data
+save...
+to change pwd
+ESC :set key=noveheslo <Enter>
+ESC :set key= <Enter> # removes passwd
+works even with another files
+vi +X pesnicka.mp3
+
 10w # jump to start of the 10th next word

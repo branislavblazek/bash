@@ -1,0 +1,11 @@
+stdin # standart input
+stdout # standart output
+stderr # starndart error
+> # stdout to file (rewrite)
+>> # stdout to file (append)
+1> # just noerror stdout
+2> # just error stdout
+ping -c2 google.skl 2> output
+&> # even noerror and error stdout
+ping -c2 google.sk > output 2>&1 # same as &>
+ping -c2 google.sk > /dev/null # remove output

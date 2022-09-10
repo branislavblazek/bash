@@ -1,0 +1,4 @@
+cmp a b # compares files
+# when no output = files are same
+cmp -lb a b # show all changes and show what changes were mage
+

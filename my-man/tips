@@ -1,0 +1,3 @@
+fc # edit the last cmd in text editor - after save it will be executed
+nohup cmd & # do the cmd in  background - even with deleted session
+od -An -N8 -to8 /dev/urandom # shows random 8bit number
