@@ -10,7 +10,6 @@ alias .....="cd ../../../.."
 # NPM shortcuts
 alias st='npm start'
 alias mgls='npm run migrate-latest'
-alias seeds=getSeeds
 
 # DIRs for work projects & start them
 WORK_DIR="$HOME/Documents/..."
