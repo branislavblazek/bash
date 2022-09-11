@@ -1,0 +1,10 @@
+cut -c1 file # prints character at every line in first column
+-c2 # second column in every line
+-c1-4 # range
+-c4- # from 4 to end
+-c-4 # from beggining to 4
+-c1,4 # just 1 and 4 col
+-d ' ' # delimiter 
+-f 1 # what block to show
+--complement # inverse
+--output-delimiter=$'\n'

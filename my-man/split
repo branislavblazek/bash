@@ -1,0 +1,13 @@
+split file # split files by 1000 lines, creates xaa, xab, xac,...
+wc -l xa* # will print total lines
+split file syslog- # syslog- is prefix
+-d # instead aa, ab, ac use 00, 01, 02
+-l 100 # split by 100 lines instead of 1000 
+-a 4 # legth of aaaa or 0000
+-C 30K # split by 30K
+-c # keeps lines (doesnt not break lines)
+split -d -b 1M pesnicka.mp3 song-
+cat song-* > pesnicka2.mp3
+
+# examle:
+split -l 500 -d -a 4 input prefix-

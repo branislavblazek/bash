@@ -1,0 +1,19 @@
+diff a b # compare files (better cmd)
+# result writes what to change
+# c = change 
+# a = append
+# d = delete
+# 1,2d4 remove 1,2 lines from first file to look like 4 line in second file 
+diff -c a b # with better side-by-side look
+diff -b a b # space and tab will be same
+
+diff a b > changes.diff # save to file
+patch b changes.diff # applu changes to b so it will look like a
+patch -b # makes abckup
+
+cmp a b # compares files
+# when no output = files are same
+cmp -lb a b # show all changes and show what changes were mage
+
+vimdiff prvy druhy
+Ctrl+W W # swtich between tabs
