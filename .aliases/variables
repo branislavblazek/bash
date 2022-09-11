@@ -13,15 +13,19 @@ alias mgls='npm run migrate-latest'
 alias seeds=getSeeds
 
 # DIRs for work projects & start them
-alias st-login='cd ~/Documents/Code/---WORK-DIR---/login && npm start'
-alias st-file='cd ~/Documents/Code/---WORK-DIR---/fileservice && npm start'
-alias st-be='cd ~/Documents/Code/---WORK-DIR---/backend && npm start'
-alias st-gb='cd ~/Documents/Code/---WORK-DIR---/gotenberg && docker-compose up -d'
-alias st-fe='cd ~/Documents/Code/---WORK-DIR---/frontend && npm start'
-alias localpwd='echo "---LOCAL-PWD---" | pbcopy'
-alias devpwd='echo "---DEV-PWD---" | pbcopy'
+WORK_DIR="$HOME/Documents/..."
+alias cd-login='cd ${WORK_DIR}login'
+alias cd-file='cd ${WORK_DIR}/fileservice'
+alias cd-be='cd ${WORK_DIR}/backend'
+alias cd-gb='cd ${WORK_DIR}/gotenberg'
+alias cd-fe='cd ${WORK_DIR}/frontend'
+alias st-login='cd-login && npm start'
+alias st-file='cd-file && npm start'
+alias st-be='cd-be && npm start'
+alias st-gb='cd-gb && docker-compose up -d'
+alias st-fe='cd-fe  && npm start'
+alias devpwd='echo "6bAnfHTcKzEcGd0" | pbcopy'
 
 # GIT Rebase
-alias reb=Rebase
 alias rebcon='git rebase --continue'
 alias rebabt='git rebase --abort'

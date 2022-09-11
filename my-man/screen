@@ -11,6 +11,8 @@ Ctrl+A Shift+A # renames current screen title
 Ctrl+A X # password current screen
 Ctrl+D # detach screen cmd
 Ctrl+A ? # help
+Ctrl+H # makes screenshot of current screen and saves into ~ as hardcopy.1
+Ctrl+H Shift+H # record cmds and with Ctrl+H exit
 screen -r # redetach
 screen -ls # screens in bg
 screen -r ID # redetach to ID
