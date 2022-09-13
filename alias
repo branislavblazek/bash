@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+source /Users/branislav/Documents/Code/Personal/bash/config.sh
+
+# run some custom sh scripts
+alias shmu='. ${GIT_DIR}/shmu'
 
 # Easier navigation: .., ..., ...., .....
 alias ..="cd .."
@@ -12,7 +16,6 @@ alias st='npm start'
 alias mgls='npm run migrate-latest'
 
 # DIRs for work projects & start them
-WORK_DIR="$HOME/Documents/..."
 alias cd-login='cd ${WORK_DIR}login'
 alias cd-file='cd ${WORK_DIR}/fileservice'
 alias cd-be='cd ${WORK_DIR}/backend'

@@ -4,6 +4,9 @@
 # Downloads current meteogram for Zilina, Slovakia
 # Branislav Blazek 2022
 
+# save current location
+pushd
+
 # move to correct location
 cd /tmp
 mkdir shmu-temp &> /dev/null
@@ -25,6 +28,9 @@ SHMU_LINK=https://www.shmu.sk/data/datanwp/v2/meteogram/al-meteogram_$PARAMS-nwp
 FILENAME=$PARAMS.png
 curl $SHMU_LINK -so $FILENAME
 open $FILENAME
+
+# revert location
+popd
 
 # TODO:
 # 1. add options to choose from

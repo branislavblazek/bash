@@ -1,23 +1,5 @@
 #!/usr/bin/env bash
 
-# GENERAL FUNCTIONS
-
-# Python3 calculator (alt to EXPR)
-function calc () {  python3 -c "print($*)" }
-
-# WORK FUNCTIONS
-
-# Script for getting Seeds from Work Server
-function seeds () {
-	cd ~/Documents/Code/---WORK-DIR---/backend/db/seedCentralCode
-	scp datauser@192.168.212.150:~/centralCode_seeds/seedCentralCode.zip .
-	unzip -q -o seedCentralCode.zip
-	rm seedCentralCode.zip
-	npm run seed-central
-	npm run migrate-latest
-	cd ../..
-}
-
 # Automate git add & commit & push
 function rocket (){
 	current_branch=$(git rev-parse --abbrev-ref HEAD)
@@ -31,8 +13,6 @@ function rocket (){
 	fi
 	git push --set-upstream origin $current_branch
 }
-
-# GIT FUNCTIONS
 
 # Create new Branch from DEV Branch
 function cb () {
@@ -48,10 +28,10 @@ function cbs () {
 }
 
 # Move into another Branch
-function co () { git checkout $1 }
+function co () { git checkout $1; }
 
 # Delete lastly created local Branch
-function dellastlocal () { git branch -d "@{-1}" }
+function dellastlocal () { git branch -d "@{-1}"; }
 
 # Full Rebase proccess on DEV Branch
 function reb (){

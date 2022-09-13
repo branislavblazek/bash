@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Python3 calculator (alt to EXPR)
+function calc () {  python3 -c "print($*)"; }
