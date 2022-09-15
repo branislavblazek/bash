@@ -1,0 +1,4 @@
+tr # translate
+echo jano | tr o a # > jana
+a-z A-Z # to uppercase
+-d a # removes all 'a'
