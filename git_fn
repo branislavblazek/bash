@@ -3,7 +3,7 @@
 # Automate git add & commit & push
 function rocket (){
 	current_branch=$(git rev-parse --abbrev-ref HEAD)
-	human_branch_title=${current_branch//-/ }
+	human_branch_title=$(echo $current_branch | sed 's/-/ /g;s/ bug / [bug] /;s/ reopened / [reopened] /')
 	git add *
 	if [ -z "$1" ]
 	then
