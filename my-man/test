@@ -1,0 +1,26 @@
+test # check something from file
+
+-e file # if exists file; echo $? > 0 if exists otherwise 1
+	test -e file && echo ano || echo nie
+-f file # if is file
+-d file # is dir
+-L file # is sym link
+-O file # owner (i am owner)
+-G file # group owner
+subot -nt subor2 # subor newer than subor2
+subor -ot subor2 # subor older than subor2
+-s file # not null filze size
+-w(-x, -r) file # access
+slovo = a # compare string
+3 -eq 3 #  =
+3 -neq 3 # !=
+2 -gt 1 # >
+2 -ge 2 # >=
+2 -lt 1 # <
+2 -le 2 # <=
+-a # and; test 2 -gt 1 -a 3 -le 3
+-o # or
+-n string # is string empty; -n "" > 0
+
+test expr && echo OK || echo NOT
+[ expr ] && echo OK || echo NOT

@@ -1,0 +1,19 @@
+expr # calc
+2 + 2 # 4
+7 - 5 # 2
+10 / 3 # 3
+10 % 3 # 1
+5 \* 5 $ 25
+a = b # 0 or 1
+a != b # 1 or 0
+$a \> $b # greater than
+$a \< $b # lower than
+\(2 + 2\)
+5 \| 10 # if first arg is zero, retuns second, otherwise first
+0 \& 1 # returns null value
+513 : 528 # no of common letters from ^
+length ahoj # retuns string length
+	on mac not working, alt:
+	'ahoj branislav' : .\* # 14
+mojeDlheSlovo : ".\*\(.....\)" # returns last 5 chars
+mojeDlheSlovo : "\(....\)" # first 4 chars

@@ -1,0 +1,11 @@
+awk '{print}' file # better than sed
+awk '{print}' file | head # just 10 lines
+
+'/root/ {print}' file # lines which contains 'root'
+'/root/ {print $1}' file # print just first column of lines which contains 'root'
+'{print $2, $1}' file # print second and first column
+'{print $0}' file # print whole line
+'{print NR $0}' file # Number Record
+'{print NF}' file # Number of Fileds
+'BEGIN{FS="0";} {print}' file # print rows until FS (zero in this case) 
+
