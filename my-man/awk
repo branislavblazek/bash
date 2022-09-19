@@ -3,9 +3,32 @@ awk '{print}' file | head # just 10 lines
 
 '/root/ {print}' file # lines which contains 'root'
 '/root/ {print $1}' file # print just first column of lines which contains 'root'
+'^/d/' # find from begging of line
+'/d$/' # find from end of line
+/b.v/ # find lines which contains b (one any char) v
+/b*v/ # find lines which contains b (unlimited any char) v
+/b[ar]/ $ find liens which contains ba or br
 '{print $2, $1}' file # print second and first column
 '{print $0}' file # print whole line
 '{print NR $0}' file # Number Record
 '{print NF}' file # Number of Fileds
-'BEGIN{FS="0";} {print}' file # print rows until FS (zero in this case) 
+'BEGIN{print NR, "Toto je zaciatok"} {print NR, $0}' file # print line before output
+'BEGIN{RS="0"; ORS="ahoj\n"} {print NR, $0}' # break line at every 0 in row
+'BEGIN{FS="0"; OFS="\t"} {print}' file # print rows until FS (zero in this case) ^i
+'BEGIN{FIELDWIDTHS="3 3 3"} {print $1, $2, $3}' file # break one column into three by width
+'{print}END{print NR, "Toto je koniec"}' file # print line after output
+'NR==2 {print NR, $0}' file # print just second line
+	'NR==2, NR==5 ...' # range
+	'NR==2 || NR==5 ...' # just second and fitth line
+	'NR>=5 && NR<=7 ...'
+	'BEGIN{odkial=2;dokial=6} NR>=odkial && NR<=dokial && NR!=4 {print NR, $0}' file
+'$2<=45 {print &0}' # print line if value in second field is le than 45
+'NF==9 && $5<256' # print lines which no fields is 9 and value in fifth field <= 256 
+echo 10 20 30 | awk '{sucet = $1 + $2 + $3; print sucet}'
+# aritmetic average
+echo 10 20 30 40 | awk '{sucet=$1+$2+$3+$4;delenie=sucet/NF; print delenie}'
+echo 10 20 30 70 | awk '{for(i=1;i<=NF;i++) sucet += $i; delenie=sucet/NF; print NF, sucet, delenie}'
 
+awk '/branislav/ {print $0}' file
+# ====>
+awk /branislav/ file
