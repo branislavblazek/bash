@@ -30,6 +30,45 @@ function cbs () {
 # Move into another Branch
 function co () { git checkout $1; }
 
+# Find branch in local Branches; if one branch founded, switch branch to that
+function fb () {
+	LOG_FILE=.git_branches.log
+	BRANCH_NOT_FOUND="Branch with name '"$1"' not found!"
+	ARGUMENT_NOT_FILLED="Name of branch must be filled!"	
+	
+	# handle empty argument
+	if [ -z $1 ]
+	then 
+		echo $ARGUMENT_NOT_FILLED
+		return 0
+	fi
+	
+	# find local branches, grep with argument, save to file
+	git branch | grep $1 &> $LOG_FILE
+	
+	if ! [ -s $LOG_FILE ]
+	then
+		echo $BRANCH_NOT_FOUND
+		return 0
+	fi
+
+	# get number of lines
+	lines=$(wc -l $LOG_FILE | sed "s/ //g;s/$LOG_FILE/ $LOG_FILE/g" | cut -f 1 -d ' ')
+	
+	# if just one, change branch to it
+	if [[ $lines -eq 1 ]]
+	then
+		git checkout $(head -1 $LOG_FILE)
+	fi
+
+	# cat other lines
+	cat $LOG_FILE
+	# TODO: add line numbers options to choose	
+
+	# delete file
+	rm $LOG_FILE
+}
+
 # Delete lastly created local Branch
 function dellastlocal () { git branch -d "@{-1}"; }
 
@@ -38,7 +77,15 @@ function reb (){
         git checkout dev
         git pull
         git checkout -
-        git rebase dev
+        git rebase dev > .git_rebase_status.log
+	lastline=tail -1 .git_rebase_status.log
+	if [[ $lastline == "Successfully"* ]];
+	then
+		git push -f && echo "Successfully pushed to parent."
+	else
+		cat .git_rebase_status.log
+	fi
+	rm .git_rebase_status.log
 }
 
 # Fix CRLF Problem (usually Windows to MacOS)
