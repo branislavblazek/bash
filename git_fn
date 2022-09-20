@@ -78,7 +78,7 @@ function reb (){
         git pull
         git checkout -
         git rebase dev > .git_rebase_status.log
-	lastline=tail -1 .git_rebase_status.log
+	lastline=$(tail -1 .git_rebase_status.log)
 	if [[ $lastline == "Successfully"* ]];
 	then
 		git push -f && echo "Successfully pushed to parent."

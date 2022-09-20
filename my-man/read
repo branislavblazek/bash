@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo Zadaj svoje ctene meno
+read meno
+echo Tvoje ctene meno je $meno
+
+#
+# -p "Sem ho zadaj: "
+# -s # silent (as password)
+read -p "Zadaj svoje meno, vek a farbu oci: " name age color
+echo Volas sa $meno, mas $age rokov a tvoja farba oci je $color

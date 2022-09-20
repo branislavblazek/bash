@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo Zacinam
+read -p "Chces pokracovat? [y/N] " next
+
+case $next in
+[yY])
+echo Pokracujem
+;;
+[nN])
+echo Koncim!
+exit
+;;
+*)
+echo Neplatna volba! Koncim!
+exit
+;;
+esac

@@ -1,0 +1,25 @@
+#!/bin/bash
+
+read -p "Zadaj svoje meno: " meno
+
+select pohlavie in "muz" "zena" "exit"
+
+do
+	if [ "$pohlavie" == muz ]
+	then
+		# echo si muz
+		break
+	elif [ "$pohlavie" == zena ]
+	then
+		#echo si zena
+		break
+	elif [ "$pohlavie" == exit ]
+	then		
+		echo Fakt?
+		exit
+	else
+		echo "Vyber si znova zle si stlacil"
+	fi
+done
+
+echo Pohlavie mas ako $pohlavie a tvoje meno je $meno
