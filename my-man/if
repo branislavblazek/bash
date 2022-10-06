@@ -1,0 +1,50 @@
+#!/bin/bash
+
+prva=$1
+druha=$2
+
+#echo $prva
+#echo $druha
+
+#if [[ $prva = "$druha"* ]]
+#then
+#echo 'OK'	
+#fi
+
+# ---------------------------
+
+#read -p "Ako sa volas?:" meno
+
+#meno=$(echo $meno | tr [A-Z] [a-z])
+#if [ $meno = branislav ]
+#then
+#echo OK
+#fi
+
+# ----------------------------
+
+# gt ge lt le eq ne
+
+#if [ 1 -lt 2 ]
+#then
+#echo OK
+#fi
+
+# -----------------------------
+
+# -o OR -a AND
+# [[ a && b ]] [[ a || b ]] 
+#if [ $prva -eq 1 -o $druha -eq 1 ]
+#then
+#echo OK
+#fi
+
+# ------------------------------
+
+# [empty] = is true, -z is null, -e = exists file, -s = exists file and have size,
+# nt = newer than, ot = older than
+#if [ $prva ]
+#if [ if -nt vim ] 
+#then
+#echo OK
+#fi
