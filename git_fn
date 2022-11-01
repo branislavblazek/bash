@@ -16,7 +16,7 @@ function rocket (){
 
 # Create new Branch from DEV Branch
 function cb () {
-        git checkout dev
+        git checkout master
         git pull
         git checkout -b $1
 }
@@ -24,7 +24,7 @@ function cb () {
 # Change Branch and Start
 function cbs () {
         cb $1
-        npm start
+        npm run dev
 }
 
 # Move into another Branch
@@ -74,10 +74,10 @@ function dellastlocal () { git branch -d "@{-1}"; }
 
 # Full Rebase proccess on DEV Branch
 function reb (){
-        git checkout dev
+        git checkout master
         git pull
         git checkout -
-        git rebase dev &> .git_rebase_status.log
+        git rebase master &> .git_rebase_status.log
 	lastline=$(tail -1 .git_rebase_status.log)
 	if [[ $lastline == "Successfully"* ]];
 	then
