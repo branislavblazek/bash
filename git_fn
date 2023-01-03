@@ -78,15 +78,22 @@ function reb (){
         git pull
         git checkout -
         git rebase master &> .git_rebase_status.log
-	lastline=$(tail -1 .git_rebase_status.log)
-	if [[ $lastline == "Successfully"* ]];
+	linenumber=$(sed -n '/Successfully/=' .git_rebase_status.log)
+	line=$(sed "${linenumber}q;d" .git_rebase_status.log)
+	if [[ $line == *"Successfully rebased and updated"* ]];
 	then
 		git push -f && echo "Successfully pushed to parent."
 	else
-		echo "=====Alt code running====="
 		cat .git_rebase_status.log
 	fi
 	rm .git_rebase_status.log
+}
+
+# Quick Rebase - jump into branch, rebase and if w/o conflicts, go back to master
+function qreb() {
+	co $1
+	output=reb
+	echo $output
 }
 
 # Fix CRLF Problem (usually Windows to MacOS)

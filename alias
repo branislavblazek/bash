@@ -3,6 +3,7 @@ source /Users/branislav/Documents/Code/Personal/bash/config.sh
 
 # run some custom sh scripts
 alias shmu='. ${GIT_DIR}/shmu'
+alias gphotopair='. ${GIT_DIR}/gphotopair'
 
 # Easier navigation: .., ..., ...., .....
 alias ..="cd .."

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+SUBDIR="Photos from 2022"
+TAKEOUT_N=3
+FINAL="/Users/branislav/Desktop/paired"
+
+source=$(echo $1 | sed 's/.json//')
+
+thereresult=$(find . -type f -name "${source}*")
+
+founded=false
+for i in $(seq 1 $TAKEOUT_N);
+do
+	iparent="/Users/branislav/Documents/fotky/Takeout_$i/Fotky Google/$SUBDIR"
+	targetresult=$(find $iparent -type f -name "${source}*")
+	if [ ! -z $targetresult ]
+	then
+		echo "Presuvam na plochu z $i"
+		mv $1 $FINAL
+		mv $targetresult $FINAL
+		founded=true
+		break
+	fi
+done
+
+if [ $founded = false ]
+then
+	echo "Nenasiel som v priecinku"
+	mkdir -p notFound
+	mv $1 notFound/
+fi
