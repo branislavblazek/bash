@@ -16,7 +16,7 @@ function rocket (){
 
 # Create new Branch from DEV Branch
 function cb () {
-        git checkout master
+        git checkout dev
         git pull
         git checkout -b $1
 }
@@ -92,8 +92,10 @@ function reb (){
 # Quick Rebase - jump into branch, rebase and if w/o conflicts, go back to master
 function qreb() {
 	co $1
-	output=reb
-	echo $output
+	output=$(reb)
+	echo $output >> output.txt
+	grep -q "Successfully pushed to parent." output.txt && co master 
+	rm output.txt
 }
 
 # Fix CRLF Problem (usually Windows to MacOS)
